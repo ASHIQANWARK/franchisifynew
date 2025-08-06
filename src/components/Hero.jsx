@@ -2,18 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import heroVideo from "../assets/video/vid1.mp4";
-import bgSvg from "../assets/images/3470568.jpg"; // JPG background
+
 
 const HeroSection = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Background Layer */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={bgSvg}
-          alt="Background"
-          className="w-full h-full object-cover absolute top-0 left-0"
-        />
         <video
           className="w-full h-full object-cover absolute top-0 left-0 opacity-80"
           src={heroVideo}
@@ -23,21 +18,8 @@ const HeroSection = () => {
           playsInline
         />
       </div>
-      
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50 z-10" />
-
-      {/* Animated Circles */}
-      <motion.div
-        className="hidden sm:block absolute top-10 left-10 w-28 sm:w-36 md:w-40 h-28 sm:h-36 md:h-40 bg-blue-500 opacity-20 rounded-full blur-3xl z-20"
-        animate={{ scale: [1, 1.2, 1] }}
-        transition={{ repeat: Infinity, duration: 4 }}
-      />
-      <motion.div
-        className="hidden sm:block absolute bottom-10 right-10 w-24 sm:w-32 md:w-36 h-24 sm:h-32 md:h-36 bg-indigo-500 opacity-20 rounded-full blur-3xl z-20"
-        animate={{ scale: [1, 1.3, 1] }}
-        transition={{ repeat: Infinity, duration: 5 }}
-      />
 
       {/* Foreground Content */}
       <div className="relative z-30 flex items-center justify-center h-full px-4 sm:px-6 lg:px-8 text-center">
