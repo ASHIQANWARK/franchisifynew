@@ -11,7 +11,6 @@ import {
 import shafi from "../assets/images/IMG_3596.png";
 import jino from "../assets/images/jino-removebg-preview.png";
 
-import ashwath from "../assets/images/ashwath.png";
 
 // ✅ Background Image
 import bgSvg from "../assets/images/rm222-mind-26.jpg";
@@ -19,7 +18,7 @@ import bgSvg from "../assets/images/rm222-mind-26.jpg";
 const teamMembers = [
   { name: "Shafi Shoukath", role: "Chairman", image: shafi },
   { name: "Jino Joseph", role: "Chief Executive Officer (CEO)", image: jino },
-  { name: "Ashwath E", role: "Business Consultant Manager (BCM)", image: ashwath },
+ 
 ];
 
 const cardVariants = {
