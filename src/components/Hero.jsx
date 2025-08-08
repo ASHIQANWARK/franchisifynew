@@ -19,7 +19,7 @@ const HeroSection = () => {
         />
       </div>
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50 z-10" />
+      <div className="absolute inset-0 bg-black/90 z-10" />
 
       {/* Foreground Content */}
       <div className="relative z-30 flex items-center justify-center h-full px-4 sm:px-6 lg:px-8 text-center">
