@@ -125,21 +125,7 @@ const TopFranchise = () => {
           ))}
         </div>
 
-        {/* View All Button */}
-        <motion.div
-          className="text-center mt-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <button
-            onClick={() => navigate("/all-franchises")}
-            className="bg-gradient-to-r from-gray-900 to-gray-700 text-white py-3 px-8 rounded-xl font-semibold hover:from-gray-800 hover:to-gray-600 transition-all duration-300 text-lg shadow-lg hover:shadow-xl hover:scale-105"
-          >
-            View All Franchises
-          </button>
-        </motion.div>
+        
       </div>
     </section>
   );
