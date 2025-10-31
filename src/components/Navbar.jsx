@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/images/Franchisify.in-logo-white-png-(2).png";
+import Logo from "../assets/images/Franchisify.in (1).png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +19,7 @@ const Navigation = () => {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] shadow-md"
+          ? "bg-white shadow-md"
           : "bg-transparent"
       }`}
     >
@@ -38,43 +38,38 @@ const Navigation = () => {
           <li>
             <Link
               to="/"
-              className="text-white hover:text-orange-400 transition-all duration-200"
+              className={`hover:text-orange-400 transition-all duration-200 ${
+                scrolled ? "text-black" : "text-black"
+              }`}
             >
               Home
             </Link>
           </li>
           <li>
-            <a
-              href="#about"
-              className="text-white hover:text-orange-400 transition-all duration-200"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
-              }}
+            <Link
+              to="/about"
+              className={`hover:text-orange-400 transition-all duration-200 ${
+                scrolled ? "text-black" : "text-black"
+              }`}
             >
               About
-            </a>
+            </Link>
           </li>
           <li>
             <Link
               to="/deservices"
-              className="text-white hover:text-orange-400 transition-all duration-200"
+              className={`hover:text-orange-400 transition-all duration-200 ${
+                scrolled ? "text-black" : "text-black"
+              }`}
             >
               Services
             </Link>
           </li>
+         
           <li>
             <Link
               to="/contact"
-              className="text-white hover:text-orange-400 transition-all duration-200"
-            >
-              Career
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/contact"
-              className="text-white hover:text-orange-400 transition-all duration-200"
+              className="bg-blue-600 text-black px-6 py-2 rounded-lg font-semibold shadow-md hover:bg-gray-100 hover:shadow-lg transition-all duration-200 border border-gray-200"
             >
               Contact
             </Link>
@@ -85,7 +80,9 @@ const Navigation = () => {
         <div className="md:hidden flex items-center">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-white focus:outline-none"
+            className={`focus:outline-none ${
+              scrolled ? "text-black" : "text-white"
+            }`}
           >
             <svg
               className="w-8 h-8"
@@ -117,37 +114,40 @@ const Navigation = () => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } md:hidden w-full bg-[#1e293b] transition-all duration-300 ease-in-out font-serif`}
+        } md:hidden w-full bg-white transition-all duration-300 ease-in-out font-serif shadow-lg`}
       >
         <div className="px-8 py-6 space-y-5 text-center text-lg font-semibold">
           <Link
             to="/"
-            className="block text-white hover:text-orange-400 transition"
+            className="block text-black hover:text-orange-400 transition"
             onClick={() => setIsOpen(false)}
           >
             Home
           </Link>
           <Link
             to="/deservices"
-            className="block text-white hover:text-orange-400 transition"
+            className="block text-black hover:text-orange-400 transition"
             onClick={() => setIsOpen(false)}
           >
             Services
           </Link>
-          <a
-            href="#about"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
-              setIsOpen(false);
-            }}
-            className="block text-white hover:text-orange-400 transition"
+          <Link
+            to="/about"
+            className="block text-black hover:text-orange-400 transition"
+            onClick={() => setIsOpen(false)}
           >
             About
-          </a>
+          </Link>
           <Link
             to="/contact"
-            className="block text-white hover:text-orange-400 transition"
+            className="block text-black hover:text-orange-400 transition"
+            onClick={() => setIsOpen(false)}
+          >
+            Career
+          </Link>
+          <Link
+            to="/contact"
+            className="block bg-gray-100 text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition"
             onClick={() => setIsOpen(false)}
           >
             Contact

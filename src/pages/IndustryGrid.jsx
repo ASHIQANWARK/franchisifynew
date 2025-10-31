@@ -13,7 +13,7 @@ import {
   FaServer,
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import bgPattern from "../assets/images/blue_abstract_lines_2.jpg"; // Should be compressed and <150kb
+import { motion } from "framer-motion";
 
 const industries = [
   { icon: <FaUtensils size={36} />, label: "Restaurant", route: "/restaurant" },
@@ -39,41 +39,61 @@ const IndustryGrid = () => {
   };
 
   return (
-    <section
-      className="relative py-12 bg-white text-center"
-      style={{
-        backgroundImage: `url(${bgPattern})`,
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center center",
-        backgroundSize: "cover",
-      }}
-    >
-      {/* Section Heading */}
-      <h2 className="text-2xl md:text-4xl font-bold text-white px-4 mb-8">
-        Extensive Network of Brands & Industries
-        <br />
-        Choosed From us
-        <span className="block h-1 w-24 mx-auto mt-2 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 rounded-full" />
-      </h2>
-
-      {/* Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-4 md:px-10">
-        {industries.map((item, index) => (
-          <div
-            key={index}
-            onClick={() => handleClick(item.route)}
-            className={`flex flex-col items-center justify-center p-4 text-white rounded-lg transition-all duration-300 ${
-              item.route
-                ? "cursor-pointer hover:text-orange-400"
-                : "cursor-default"
-            }`}
-          >
-            {item.icon}
-            <p className="mt-2 text-sm md:text-base font-medium border-b-2 border-transparent hover:border-orange-400">
-              {item.label}
+    <section className="relative bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Heading with same style as Services */}
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          {/* Background container */}
+          <div className="bg-gray-200 rounded-b-4xl p-6 sm:p-6 mb-6 w-full max-w-2xl mx-auto">
+            {/* Main Heading */}
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
+              Franchise Categories
+            </h2>
+            
+            {/* Subtitle/Description */}
+            <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto">
+              Explore diverse franchise opportunities across various industries
             </p>
           </div>
-        ))}
+          
+          {/* Bottom accent line */}
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full" />
+        </motion.div>
+
+        {/* Grid with icons only, no backgrounds */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-4 md:px-10">
+          {industries.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              onClick={() => handleClick(item.route)}
+              className={`flex flex-col items-center justify-center p-4 transition-all duration-300 ${
+                item.route
+                  ? "cursor-pointer hover:text-blue-500 hover:scale-105"
+                  : "cursor-default"
+              } text-gray-700`}
+            >
+              {/* Icon */}
+              <div className="mb-2">
+                {item.icon}
+              </div>
+              
+              {/* Label */}
+              <p className="text-sm md:text-base font-medium text-center">
+                {item.label}
+              </p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

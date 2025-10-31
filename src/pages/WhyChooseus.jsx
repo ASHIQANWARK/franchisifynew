@@ -1,90 +1,93 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  FaChartLine,
-  FaCogs,
-  FaDollarSign,
-  FaLightbulb,
-} from "react-icons/fa";
-import why from "../assets/images/why.jpg"; // Make sure this is compressed or in WebP
+
+// Import your images - replace these with your actual image paths
+import franchiseModelImg from "../assets/images/Group 21.png";
+import operationalStrategyImg from "../assets/images/Rectangle 6.png";
+import profitabilityImg from "../assets/images/Rectangle 6 (1).png";
+import marketInsightsImg from "../assets/images/Rectangle 6 (3).png";
 
 const highlights = [
   {
     title: "Successful Franchise Models",
     description:
       "Designed to maximize your brand's potential and ensure sustainable growth.",
-    icon: <FaChartLine className="text-4xl text-[#fbbf24]" />,
+    image: franchiseModelImg,
   },
   {
     title: "Operational Strategies",
     description:
       "Providing step-by-step guidance to streamline your franchise operations.",
-    icon: <FaCogs className="text-4xl text-[#fbbf24]" />,
+    image: operationalStrategyImg,
   },
   {
     title: "Profitability Focus",
     description:
       "Ensuring that expansion leads to tangible financial success.",
-    icon: <FaDollarSign className="text-4xl text-[#fbbf24]" />,
+    image: profitabilityImg,
   },
   {
     title: "Market Insights",
     description:
       "Equipping franchisees with essential tools and industry knowledge.",
-    icon: <FaLightbulb className="text-4xl text-[#fbbf24]" />,
+    image: marketInsightsImg,
   },
 ];
 
 const WhyFranchisify = () => {
   return (
-    <section
-      className="relative min-h-screen flex items-center justify-center text-white py-16 px-6 bg-cover bg-center"
-      style={{
-        backgroundImage: `url(${why})`,
-        backgroundAttachment: "fixed",
-      }}
-    >
-      {/* Dark Overlay (less GPU intensive) */}
-      <div className="absolute inset-0 bg-black/50 z-0" />
-
-      {/* Main Content */}
-      <div className="relative max-w-7xl w-full mx-auto text-center z-10">
-        {/* Heading */}
-        <motion.h2
-          className="text-3xl md:text-5xl font-extrabold leading-tight"
-          initial={{ opacity: 0, y: -30 }}
+    <section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Heading with same style as Services */}
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Why <span className="text-[#fbbf24]">Franchisify?</span>
-        </motion.h2>
+          {/* Background container */}
+          <div className="bg-gray-200 rounded-b-4xl p-6 sm:p-6 mb-6 w-full max-w-2xl mx-auto">
+            {/* Main Heading */}
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
+              Why choose Franchisify
+            </h2>
+            
+            {/* Subtitle/Description */}
+            <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto italic">
+              We focus on creating success stories rather than merely exchanging contracts.
+            </p>
+          </div>
+          
+          {/* Bottom accent line */}
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full" />
+        </motion.div>
 
-        {/* Subheading */}
-        <motion.p
-          className="mt-4 text-base md:text-lg text-gray-300 max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: true }}
-        >
-          We focus on creating success stories rather than merely exchanging contracts.
-        </motion.p>
-
-        {/* Feature Cards */}
-        <div className="mt-14 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
+        {/* Feature Cards with Images */}
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {highlights.map((item, index) => (
             <motion.div
               key={index}
-              className="bg-white/10 p-6 rounded-2xl border border-white/10 shadow-md hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center"
+              className="bg-white p-4 rounded-xl transition-all duration-300 flex flex-col items-center text-center hover:scale-105"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="mb-3">{item.icon}</div>
-              <h3 className="text-lg md:text-xl font-bold">{item.title}</h3>
-              <p className="mt-3 text-gray-300 text-sm md:text-base">
+              {/* Image - Full width within card */}
+              <div className="mb-3 w-full h-40 overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-contain p-2"
+                />
+              </div>
+              
+              {/* Content with smaller text */}
+              <h3 className="text-sm md:text-base font-bold text-gray-900 mb-2 leading-tight">
+                {item.title}
+              </h3>
+              <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
                 {item.description}
               </p>
             </motion.div>
