@@ -11,7 +11,7 @@ import {
   FaExpand,
   FaFileContract,
   FaPalette,
-  FaVideo
+  FaVideo,
 } from "react-icons/fa";
 
 // Hero and content media imports
@@ -33,7 +33,7 @@ const FranchiseServices = () => {
 
   const videos = [
     { src: video1, title: "Kovai Rawuther Biriyani Franchise" },
-    { src: video2, title: "Study in Bengaluru Success Story" },
+    { src: video2, title: "Career Cafe Franchise Model" },
     { src: video3, title: "AR Biriyani Franchise Model" },
   ];
 
@@ -49,62 +49,83 @@ const FranchiseServices = () => {
 
   const services = [
     {
-      icon: <FaRocket className="text-4xl text-blue-600" />,
+      icon: <FaRocket className="text-2xl sm:text-3xl text-blue-600" />,
       title: "End to End Franchise Strategy & Structure",
-      description: "Comprehensive franchise solutions from modeling to legal, marketing, training, and more.",
-      image: strategyImg
+      description:
+        "Comprehensive franchise solutions from modeling to legal, marketing, training, and more.",
+      image: strategyImg,
     },
     {
-      icon: <FaPalette className="text-4xl text-green-600" />,
+      icon: <FaPalette className="text-2xl sm:text-3xl text-green-600" />,
       title: "Franchise Design & Visuals",
-      description: "Brand-aligned systems that are easy to replicate, ensuring operational consistency.",
-      image: designImg
+      description:
+        "Brand-aligned systems that are easy to replicate, ensuring operational consistency.",
+      image: designImg,
     },
     {
-      icon: <FaFileContract className="text-4xl text-purple-600" />,
+      icon: <FaFileContract className="text-2xl sm:text-3xl text-purple-600" />,
       title: "Legal Documentation & Agreements",
-      description: "Foundational legal compliance and performance optimization from launch and beyond.",
-      image: legalImg
-    }
+      description:
+        "Foundational legal compliance and performance optimization from launch and beyond.",
+      image: legalImg,
+    },
   ];
 
   const advantages = [
     {
-      icon: <FaCrown className="text-3xl text-white" />,
+      icon: <FaCrown className="text-2xl sm:text-3xl text-white" />,
       title: "End to End Complementary Expertise",
-      description: "From concept to rollout—modeling, marketing, training, and legal compliance.",
-      gradient: "from-purple-600 to-blue-600"
+      description:
+        "From concept to rollout—modeling, marketing, training, and legal compliance.",
+      gradient: "from-purple-600 to-blue-600",
     },
     {
-      icon: <FaExpand className="text-3xl text-white" />,
+      icon: <FaExpand className="text-2xl sm:text-3xl text-white" />,
       title: "Tailored & Scalable Franchise Solutions",
-      description: "Brand-matching strategies and systems built for operational consistency.",
-      gradient: "from-pink-600 to-purple-600"
+      description:
+        "Brand-matching strategies and systems built for operational consistency.",
+      gradient: "from-pink-600 to-purple-600",
     },
     {
-      icon: <FaShieldAlt className="text-3xl text-white" />,
+      icon: <FaShieldAlt className="text-2xl sm:text-3xl text-white" />,
       title: "Market Driven Strategy & Ongoing Support",
-      description: "Research-backed strategy and long-term advisory for sustained success.",
-      gradient: "from-red-600 to-pink-600"
-    }
+      description:
+        "Research-backed strategy and long-term advisory for sustained success.",
+      gradient: "from-red-600 to-pink-600",
+    },
   ];
 
   const solutions = [
     {
       title: "Launch Ready Essentials",
       color: "yellow",
-      features: ["Basic Franchise Model", "Legal Documentation", "Brand Guidelines", "Initial Training"]
+      features: [
+        "Basic Franchise Model",
+        "Legal Documentation",
+        "Brand Guidelines",
+        "Initial Training",
+      ],
     },
     {
       title: "Growth Ready Hybrid",
       color: "blue",
-      features: ["Advanced Financial Modeling", "Marketing Strategy", "Operational Manuals", "Ongoing Support"]
+      features: [
+        "Advanced Financial Modeling",
+        "Marketing Strategy",
+        "Operational Manuals",
+        "Ongoing Support",
+      ],
     },
     {
       title: "Expansion Suite",
       color: "purple",
-      features: ["Multi-territory Expansion", "International Compliance", "Advanced Analytics", "Dedicated Account Manager"]
-    }
+      features: [
+        "Multi-territory Expansion",
+        "International Compliance",
+        "Advanced Analytics",
+        "Dedicated Account Manager",
+      ],
+    },
   ];
 
   const legalServices = [
@@ -115,13 +136,13 @@ const FranchiseServices = () => {
     "Trademark Licensing & IP Protection",
     "Franchisee Exit & Renewal Clauses",
     "Territory Mapping, Royalty Terms & Legal Risk Shields",
-    "Custom legal documentation for Retail, Food, Digital, and Service brands"
+    "Custom legal documentation for Retail, Food, Digital, and Service brands",
   ];
 
   return (
-    <div className="bg-gray-50">
+    <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative w-full h-[70vh] overflow-hidden">
+      <section className="relative w-full h-[50vh] sm:h-[60vh] lg:h-[70vh] overflow-hidden">
         <video
           className="absolute w-full h-full object-cover"
           src={heroVideo}
@@ -130,86 +151,53 @@ const FranchiseServices = () => {
           muted
           playsInline
         />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/70" />
         <div className="relative z-10 flex items-center justify-center h-full px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-white text-4xl md:text-6xl font-bold mb-4">
+            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4">
               Business Structuring
             </h1>
-            <p className="text-white text-xl md:text-2xl max-w-2xl mx-auto">
-              Transform your business into a scalable franchise model with our comprehensive solutions
+            <p className="text-white text-base sm:text-lg md:text-xl lg:text-2xl max-w-2xl mx-auto">
+              Transform your business into a scalable franchise model with our
+              comprehensive solutions
             </p>
           </motion.div>
         </div>
       </section>
-
-      {/* Breadcrumb */}
-      <section className="bg-white border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <nav className="flex items-center space-x-2 text-sm">
-            <Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Home
-            </Link>
-            <span className="text-gray-400">/</span>
-            <span className="text-blue-600 font-medium">Business Structuring</span>
-          </nav>
-        </div>
-      </section>
-
-      {/* Page Heading */}
-      <section className="relative bg-white py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <div className="bg-gray-100 rounded-b-4xl p-8 mb-8 w-full max-w-4xl mx-auto">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-                Business Structuring Services
-              </h1>
-              <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-                Comprehensive franchise development solutions to scale your business effectively
-              </p>
-            </div>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full" />
-          </motion.div>
-        </div>
-      </section>
-
       {/* Why We Are the Best */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-8 sm:mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">
               Why We Are the Best
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full" />
+            <div className="w-12 sm:w-16 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full" />
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100"
+                className="bg-white p-3 sm:p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 text-center hover:border-gray-200"
               >
-                <div className="text-3xl mb-4">{feature.icon}</div>
-                <h3 className="text-lg font-semibold text-gray-800 text-center">
+                <div className="text-xl sm:text-2xl mb-2 sm:mb-3">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xs sm:text-sm font-medium text-gray-800 leading-tight">
                   {feature.label}
                 </h3>
               </motion.div>
@@ -219,22 +207,22 @@ const FranchiseServices = () => {
       </section>
 
       {/* Our Services */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Our Services
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full" />
+            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full" />
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -242,23 +230,23 @@ const FranchiseServices = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+                className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-200"
               >
-                <div className="h-48 overflow-hidden">
+                <div className="h-40 sm:h-48 overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-6">
-                  <div className="flex items-center mb-4">
+                <div className="p-4 sm:p-6">
+                  <div className="flex items-center mb-3 sm:mb-4">
                     {service.icon}
-                    <h3 className="text-xl font-bold text-gray-900 ml-3">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 ml-3 leading-tight">
                       {service.title}
                     </h3>
                   </div>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                     {service.description}
                   </p>
                 </div>
@@ -269,22 +257,22 @@ const FranchiseServices = () => {
       </section>
 
       {/* Why Choose Franchisify */}
-      <section className="py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Why Choose <span className="text-blue-600">Franchisify</span>
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full" />
+            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full" />
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {advantages.map((advantage, index) => (
               <motion.div
                 key={index}
@@ -292,11 +280,15 @@ const FranchiseServices = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className={`bg-gradient-to-br ${advantage.gradient} p-8 rounded-2xl text-white shadow-lg`}
+                className={`bg-gradient-to-br ${advantage.gradient} p-6 sm:p-8 rounded-xl sm:rounded-2xl text-white shadow-lg`}
               >
-                <div className="mb-4">{advantage.icon}</div>
-                <h3 className="text-xl font-bold mb-4">{advantage.title}</h3>
-                <p className="text-blue-50 leading-relaxed">{advantage.description}</p>
+                <div className="mb-3 sm:mb-4">{advantage.icon}</div>
+                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">
+                  {advantage.title}
+                </h3>
+                <p className="text-blue-50 text-sm sm:text-base leading-relaxed">
+                  {advantage.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -304,22 +296,22 @@ const FranchiseServices = () => {
       </section>
 
       {/* Franchise Success Stories */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Franchise Success Stories
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full" />
+            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full" />
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {videos.map((video, index) => (
               <motion.div
                 key={index}
@@ -327,7 +319,7 @@ const FranchiseServices = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden"
+                className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-gray-200"
               >
                 <div className="relative">
                   <video
@@ -336,18 +328,19 @@ const FranchiseServices = () => {
                     loop
                     muted
                     playsInline
-                    className="w-full h-64 object-cover"
+                    className="w-full h-40 sm:h-48 object-cover"
                   />
                   <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                    <FaVideo className="text-white text-4xl opacity-80" />
+                    <FaVideo className="text-white text-2xl sm:text-3xl opacity-80" />
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <div className="p-4 sm:p-6">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                     {video.title}
                   </h3>
-                  <p className="text-gray-600 text-sm">
-                    Watch how we transformed this business into a successful franchise model
+                  <p className="text-gray-600 text-xs sm:text-sm">
+                    Watch how we transformed this business into a successful
+                    franchise model
                   </p>
                 </div>
               </motion.div>
@@ -357,24 +350,25 @@ const FranchiseServices = () => {
       </section>
 
       {/* Our Clients */}
-      <section className="py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h4 className="text-lg font-semibold text-blue-600 uppercase tracking-wide mb-2">
+              <h4 className="text-sm sm:text-base font-semibold text-blue-600 uppercase tracking-wide mb-2">
                 Our Clients
               </h4>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
                 Trusted by 40+ Brands Across India
               </h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mb-6 rounded-full" />
-              <p className="text-gray-600 text-lg leading-relaxed">
-                We deliver tailored franchise solutions that fuel nationwide growth and create sustainable business ecosystems.
+              <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mb-4 sm:mb-6 rounded-full" />
+              <p className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed">
+                We deliver tailored franchise solutions that fuel nationwide
+                growth and create sustainable business ecosystems.
               </p>
             </motion.div>
             <motion.div
@@ -387,7 +381,7 @@ const FranchiseServices = () => {
               <img
                 src={chartImage}
                 alt="Growth chart showing our impact"
-                className="rounded-2xl shadow-lg max-w-md w-full"
+                className="rounded-xl sm:rounded-2xl shadow-lg max-w-md w-full"
               />
             </motion.div>
           </div>
@@ -395,22 +389,22 @@ const FranchiseServices = () => {
       </section>
 
       {/* Tailored Solutions */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Tailored Solutions We Provide
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full" />
+            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full" />
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {solutions.map((solution, index) => (
               <motion.div
                 key={index}
@@ -418,19 +412,22 @@ const FranchiseServices = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className={`bg-white rounded-2xl shadow-lg p-8 text-center border-t-4 border-${solution.color}-500 relative`}
+                className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8 text-center border-t-4 border-gray-800"
               >
-                <div className={`w-12 h-12 bg-${solution.color}-500 rounded-full flex items-center justify-center mx-auto mb-6`}>
-                  <FaCheckCircle className="text-white text-xl" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <FaCheckCircle className="text-white text-lg sm:text-xl" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-6">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6">
                   {solution.title}
                 </h3>
-                <ul className="space-y-3">
+                <ul className="space-y-2 sm:space-y-3">
                   {solution.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-600">
-                      <FaCheckCircle className={`text-${solution.color}-500 mr-3`} />
-                      {feature}
+                    <li
+                      key={idx}
+                      className="flex items-center text-gray-600 text-sm sm:text-base"
+                    >
+                      <FaCheckCircle className="text-gray-800 mr-2 sm:mr-3 flex-shrink-0" />
+                      <span className="text-left">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -441,9 +438,9 @@ const FranchiseServices = () => {
       </section>
 
       {/* Legal Documentation */}
-      <section className="py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -453,7 +450,7 @@ const FranchiseServices = () => {
               <img
                 src={lawimage}
                 alt="Legal Documentation Services"
-                className="rounded-2xl shadow-lg w-full h-[500px] object-cover"
+                className="rounded-xl sm:rounded-2xl shadow-lg w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover"
               />
             </motion.div>
             <motion.div
@@ -462,15 +459,17 @@ const FranchiseServices = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
                 Legal Documentation & Agreements
               </h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mb-8 rounded-full" />
-              <div className="space-y-4">
+              <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mb-6 sm:mb-8 rounded-full" />
+              <div className="space-y-3 sm:space-y-4">
                 {legalServices.map((service, index) => (
                   <div key={index} className="flex items-start">
-                    <FaFileContract className="text-blue-600 mt-1 mr-4 flex-shrink-0" />
-                    <p className="text-gray-700 leading-relaxed">{service}</p>
+                    <FaFileContract className="text-gray-800 mt-1 mr-3 sm:mr-4 flex-shrink-0" />
+                    <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                      {service}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -480,27 +479,33 @@ const FranchiseServices = () => {
       </section>
 
       {/* Interior Design */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
                 Interior Designing with Walkthrough
               </h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mb-8 rounded-full" />
-              <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                Step into your dream space before it's even built! Our Interior Designing with Realistic Video Walkthrough service brings your vision to life through high-definition 3D visualizations and immersive walkthrough videos.
+              <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mb-6 sm:mb-8 rounded-full" />
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
+                Step into your dream space before it's even built! Our Interior
+                Designing with Realistic Video Walkthrough service brings your
+                vision to life through high-definition 3D visualizations and
+                immersive walkthrough videos.
               </p>
-              <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                From floor plans to fine textures, lighting, furniture, and décor — every detail is designed with precision and presented in a lifelike virtual experience.
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
+                From floor plans to fine textures, lighting, furniture, and
+                décor — every detail is designed with precision and presented in
+                a lifelike virtual experience.
               </p>
-              <p className="text-gray-900 font-semibold text-lg">
-                Whether it's an office, retail outlet, or commercial space — we help you visualize it before execution.
+              <p className="text-gray-900 font-semibold text-base sm:text-lg">
+                Whether it's an office, retail outlet, or commercial space — we
+                help you visualize it before execution.
               </p>
             </motion.div>
             <motion.div
@@ -512,7 +517,7 @@ const FranchiseServices = () => {
               <img
                 src={interiorImage}
                 alt="Interior Design Walkthrough"
-                className="rounded-2xl shadow-lg w-full h-[500px] object-cover"
+                className="rounded-xl sm:rounded-2xl shadow-lg w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover"
               />
             </motion.div>
           </div>

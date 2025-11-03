@@ -7,6 +7,7 @@ import WhyFranchisify from "../pages/WhyChooseus";
 
 import IndustryGrid from "../pages/IndustryGrid";
 import Enquiry from "../pages/Enquiry";
+import Testimonials from "../components/Testimonials";
 
 
 const Home = () => {
@@ -17,8 +18,7 @@ const Home = () => {
       <Services />{/* Make sure this component wraps its content in a <section id="about"> */}
       <IndustryGrid />
       <WhyFranchisify />
-  
-
+      <Testimonials />
       <Enquiry />
       <ChatBot />
     </div>

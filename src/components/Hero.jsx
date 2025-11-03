@@ -2,12 +2,25 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import heroImage from "../assets/images/Group 1.png";
+import bgImage from "../assets/images/rm222-mind-26.jpg";
 
 const HeroSection = () => {
   return (
-    <div className="w-full min-h-screen bg-white overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8 lg:py-16">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 lg:gap-12">
+    <div className="w-full min-h-screen overflow-hidden relative">
+      {/* Background Image without fixed attachment */}
+      <div 
+        className="absolute inset-0 w-full h-full"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
+      
+      {/* Content */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8 lg:py-16 relative z-10 min-h-screen flex items-center">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 lg:gap-12 w-full">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -27,21 +40,21 @@ const HeroSection = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="mt-4 sm:mt-6 md:mt-8 flex flex-col xs:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 md:gap-6">
-              <Link to="/deservices" className="w-full xs:w-auto">
+            <div className="mt-4 sm:mt-6 md:mt-8 flex flex-row items-center justify-center lg:justify-start gap-2 sm:gap-3 md:gap-4">
+              <Link to="/deservices" className="w-auto">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full xs:w-auto border-2 border-yellow-400 text-black px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-full font-semibold text-sm sm:text-base md:text-lg shadow-lg transition duration-300 hover:bg-yellow-400 hover:text-black"
+                  className="w-auto border-2 border-yellow-400 text-black px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 rounded-full font-semibold text-xs sm:text-sm md:text-base shadow-lg transition duration-300 hover:bg-yellow-400 hover:text-black"
                 >
                   Learn More
                 </motion.button>
               </Link>
-              <Link to="/contact" className="w-full xs:w-auto">
+              <Link to="/contact" className="w-auto">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full xs:w-auto bg-gradient-to-r from-orange-500 to-orange-700 text-white px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-full font-semibold text-sm sm:text-base md:text-lg shadow-lg hover:from-orange-600 hover:to-orange-800 transition duration-300"
+                  className="w-auto bg-gradient-to-r from-orange-500 to-orange-700 text-white px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 rounded-full font-semibold text-xs sm:text-sm md:text-base shadow-lg hover:from-orange-600 hover:to-orange-800 transition duration-300"
                 >
                   Get Started
                 </motion.button>
