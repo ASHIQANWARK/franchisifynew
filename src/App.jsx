@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -16,7 +16,6 @@ import Digital from "./pages/Digital";
 import Constructions from "./pages/Construction";
 import Solution from "./pages/Solution";
 import Jewellery from "./pages/Jewellery";
-
 
 const App = () => {
   return (
@@ -35,8 +34,8 @@ const App = () => {
         <Route path="/digital" element={<Digital />} />
         <Route path="/privacy" element={<PrivacyPolicy />}/>
         <Route path="/terms" element={<TermsAndConditions />}/>
-         <Route path="/solutions" element={<Solution />}/>
-         <Route path="/jewellery" element={<Jewellery />}/> 
+        <Route path="/solutions" element={<Solution />}/>
+        <Route path="/jewellery" element={<Jewellery />}/> 
       </Routes>
       <Footer />
     </Router>

@@ -10,14 +10,14 @@ const About = () => {
   return (
     <div id="about" className="bg-white">
       {/* Breadcrumb */}
-      <section className="bg-gray-50 py-4 sm:py-6 px-4 sm:px-6 lg:px-8">
+      <section className="bg-white py-4 sm:py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <nav className="flex items-center space-x-2 text-xs sm:text-sm">
-            <Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">
+            <Link to="/" className="text-white hover:text-white transition-colors">
               Home
             </Link>
-            <span className="text-gray-400">/</span>
-            <span className="text-blue-600 font-medium">About Us</span>
+            <span className="text-white">/</span>
+            <span className="text-white font-medium">About Us</span>
           </nav>
         </div>
       </section>
