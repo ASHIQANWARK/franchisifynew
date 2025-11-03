@@ -71,7 +71,7 @@ const TopFranchise = () => {
           <div className="bg-gray-100 rounded-b-4xl p-6 sm:p-6 mb-6 w-full max-w-2xl mx-auto">
             {/* Main Heading */}
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-              Top Franchise Categories
+              Top Selling Franchises
             </h2>
             
             {/* Subtitle/Description */}
