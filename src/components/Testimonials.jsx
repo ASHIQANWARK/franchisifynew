@@ -12,7 +12,7 @@ const testimonials = [
   },
   {
     name: "Shefin",
-    designation: "CEO, Studi in Bengaluru",
+    designation: "CEO, Study in Bengaluru",
     feedback:
       "Franchisify.in provided us with comprehensive legal and marketing support, making the process of franchising our education business smooth and efficient. Highly recommend their services!",
   },

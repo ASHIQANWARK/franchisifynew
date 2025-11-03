@@ -1,7 +1,7 @@
 import React from "react";
 import {
   FaStore,
-  FaWalking,
+
   FaHeart,
   FaGem,
   FaUtensils,
@@ -20,7 +20,7 @@ const industries = [
   { icon: <FaBook size={36} />, label: "Education", route: "/education" },
   { icon: <FaStore size={36} />, label: "Retail", route: "/retail" },
   { icon: <FaHardHat size={36} />, label: "Construction", route: "/construction" },
-  { icon: <FaWalking size={36} />, label: "Gym" },
+
   { icon: <FaHeart size={36} />, label: "Health Care", route: "/wellness" },
   { icon: <FaGem size={36} />, label: "Jewellery", route: "/jewellery" },
   { icon: <FaBicycle size={36} />, label: "Sports" },

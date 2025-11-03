@@ -1,21 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import restaurant from "../assets/images/restaurant.jpg";
 import kovai from "../assets/images/Kovai.png";
 import lnc from "../assets/images/LNC.jpg";
 import TTP from "../assets/images/Teatalk.jpg";
 import TTE from "../assets/images/TeaTalkExpress.jpg";
 import KOKO from "../assets/images/kokoking.jpg";
-import CE from "../assets/images/crunchys.jpg";
-import stevia from "../assets/images/stevia logo-1.png";
-import Sizzlly from "../assets/images/Sizzly Snacks Logo Kit_page-0001.jpg";
-import BBB from "../assets/images/Big Bang Bajji Logo Kit_page-0001.jpg";
-import foodoor from "../assets/images/foodoor.jpg";
-import so from "../assets/images/spized.jpg";
 import hh from "../assets/images/hungerheist.png";
 import stonedmonkey from "../assets/images/stonedmonkey.png";
-import tasteio from "../assets/images/tasteo.jpg";
 import We from "../assets/images/waffle.jpg";
 import Te from "../assets/images/T4E.jpg";
 import DA from "../assets/images/AR BRIYANI.jpg";
@@ -193,103 +185,6 @@ const franchises = [
       "Koko King services such as Fried chicken, Pizza, burgers, sandwiches, rolls, pizzas, French Fries, Chicken Lollipop, Chicken Wings, milkshakes, crushers mojitos, ice creams, and soft drinks. Our primary objective is to serve healthy and hygienic food that is also a ordable and delectable. The prominent signature recipes of Mr. AK Moideen are prioritized in the new initiative. He is a re nowned chef with 40 years of experience in the global food industry in both India and Dubai. As a ourishing proposal backed by an expert team in the food sector at the global level, we o er a golden opportunity for dynamic investors to invest in and earn pro t from our venture. Besides, there is a great opportunity for enthusiastic entrepreneurs to establish franchises with us. We present an extremely professional franchise model with a low initial investment and the assurance of future high growth and good returns through the provision of express and lounge services with a diverse range of dishes.",
   },
   {
-    name: "Crunchy's Express",
-    logo: CE,
-    investment: "₹12 Lakhs",
-    sqft: "200 sqft",
-    rating: "4.2★",
-    origin: "Kerala",
-    year: 2017,
-    model: "FOCO",
-    franchisees: 23,
-    description:
-      "Fast food joint known for its express menu and vibrant ambiance.",
-  },
-  {
-    name: "Crunchy's",
-    logo: CE,
-    investment: "₹26.5 Lakhs",
-    sqft: "600 sqft",
-    rating: "4.3★",
-    origin: "Kerala",
-    year: 2017,
-    model: "FOCO",
-    franchisees: 23,
-    description:
-      "Larger dine-in format with complete kitchen setup and family seating.",
-  },
-  {
-    name: "Crunchy's Master Franchise",
-    logo: CE,
-    investment: "₹50-75 Lakhs",
-    sqft: "200 sqft",
-    rating: "4.4★",
-    origin: "Kerala",
-    year: 2017,
-    model: "Master",
-    franchisees: 1,
-    description:
-      "Master franchise opportunity for regional operations and expansion.",
-  },
-  {
-    name: "Stevia Delights",
-    logo: stevia,
-    investment: "₹2.5 Lakhs",
-    sqft: "LWH: 4*2*7",
-    rating: "4.6★",
-    origin: "Malappuram, kottakkal",
-    year: 2021,
-    franchisees: 5,
-    description:
-      "Stevia Delights is a pioneering company specializing in producing Indian sweets and candies using stevia, a natural zero-calorie sugar alternative. Our goal is to become the leading manufacturer of stevia-based products inIndia, starting with a primary focus on the lucrative marketof Kerala. With a significant population of diabetic patientsand a health-conscious consumer base, Kerala provides promising opportunity for our innovative and healthier alternative. We invite franchises to join us on this journey to revolutionize the Indian sweets industry and expand our presence across South India.",
-  },
-  {
-    name: "Sizzlly Snacks",
-    logo: Sizzlly,
-    investment: "Shop-in-Shop: ₹3.5 Lakhs | Street Model: ₹4 Lakhs",
-    sqft: "LWH: 6*3*8",
-    rating: "4.3★",
-    origin: "Malappuram, kottakkal",
-    year: 2024,
-    franchisees: 0,
-    description:
-      "Welcome to Sizzly Snacks, the ultimate destination for snack lovers who crave bold flavours, crispy textures, and a mouth-watering experience! Our menu is crafted with a perfect blend of spice, crunch, and cheesy goodness, ensuring every bite is unforgettable. Whether you're on the go or enjoying a food break, we bring you freshly made, fast-served, and irresistibly delicious snacks thatkeep you coming back for more. Get ready to sizzle up your cravings with every bite.",
-  },
-  {
-    name: "Big Bang Bajji",
-    logo: BBB,
-    investment: "Shop-in-Shop: ₹3.5 Lakhs | Street Model: ₹4 Lakhs",
-    sqft: "LWH: 6*3*8",
-    rating: "4.4★",
-    origin: "Malappuram, kottakkal",
-    year: 2024,
-    franchisees: 1,
-    description:
-      "At Big Bang Bajji, we focus on taste, quality, and innovation. Our stalls are designed for efficiency, ensuring a smooth & fast customer experience while serving the most delicious bajjis",
-  },
-  {
-    name: "Foodoor",
-    logo: foodoor,
-    investment: "₹1 Lakhs",
-    rating: "4.0★",
-    origin: "Perinthalmanna, Kerala",
-    year: 2020,
-    franchisees: 20,
-    description:
-      "we’ve been delivering more than just Food we’ve been delivering convenience, quality and a touch of joy to your doorstep for the past four years. Founded in 2019, our mission was simple: to transform the way people experience food delivery. We started with a vision to make mealtimes effortless and enjoyable by connecting you with your favourite restaurants and culinary delights, right at your fingertips Over the years we've grown from a small start up into a trusted partner in your daily routine, thanks to our unwavering commitment to exceptional service and customer satisfaction. Our user-friendly app ensures a seamless ordering experience, while our dedicated team works around the clock to ensure that your food arrives hot, fresh, and on time. we believe that food is more than just sustenance—it’s an experience to be savoured. That’s why we take pride in our curated selection of local eateries and popular dining spots, ensuring you always have access to  the best flavours in town.",
-  },
-  {
-    name: "Spized Organics",
-    logo: so,
-    investment: "Silver :₹8 Lakhs|  Gold :₹14 Lakhs | Diamond:₹26 Lakhs",
-    rating: "4.5★",
-    origin: "Thekkadi ,Kerala",
-    year: 2015,
-    franchisees: 1,
-    description:
-      "The journey of Kerala spices from farm to kitchen is a testament to the region's rich cultural heritage and its pivotal role in the global spice trade. These spices not only enhance the flavour of dishes but also carry with them stories of ancient trade routes, culinary traditions, and the harmonious blend of cultures. Whether used in a hearty curry, a delicate dessert, or a simple home-cooked meal, Kerala spices continue to inspire anddelight chefs and food enthusiasts everywhere.",
-  },
-  {
     name: "Hunger Heist",
     logo: hh,
     investment: "17 Lakhs",
@@ -313,17 +208,7 @@ const franchises = [
     description:
       "Dr.Aslesh is a hands-on Managing Director in Stoned Monkey Food & Beverages Private Limited. He has expertise in Business Development, Operations, Manufacturing, Import - Export, Entertainment and Hospitality Industry. Through strategic foresight, drive, and determination, he built a strong foundation for his successful Group of Companies",
   },
-  {
-    name: "Tasteio",
-    logo: tasteio,
-    investment: "₹10 Lakhs",
-    rating: "4.0★",
-    origin: " Kerala",
-    year: 2025,
-    franchisees: 0,
-    description:
-      "we’ve been delivering more than just Food we’ve been delivering convenience, quality and a touch of joy to your doorstep for the past four years. Founded in 2019, our mission was simple: to transform the way people experience food delivery. We started with a vision to make mealtimes effortless and enjoyable by connecting you with your favourite restaurants and culinary delights, right at your fingertips Over the years we've grown from a small start up into a trusted partner in your daily routine, thanks to our unwavering commitment to exceptional service and customer satisfaction. Our user-friendly app ensures a seamless ordering experience, while our dedicated team works around the clock to ensure that your food arrives hot, fresh, and on time. we believe that food is more than just sustenance—it’s an experience to be savoured. That’s why we take pride in our curated selection of local eateries and popular dining spots, ensuring you always have access to  the best flavours in town.",
-  },
+  
 ];
 
 // Add more franchise objects as needed
@@ -336,106 +221,189 @@ const Restaurant = () => {
   };
 
   return (
-    <div className="bg-[#0b1120] text-gray-100 min-h-screen font-sans">
-      <div
-        className="h-80 bg-cover bg-center relative flex items-center justify-center"
-        style={{ backgroundImage: `url(${restaurant})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-transparent" />
-        <h1 className="relative text-4xl md:text-5xl font-bold text-white font-serif">
-          Restaurant Franchises
-        </h1>
-      </div>
-
-      <div className="p-4 bg-[#0e1334] border-b border-gray-800 text-sm text-gray-400">
-        <Link to="/" className="hover:text-blue-400">
-          Home
-        </Link>
-        <span className="mx-1">/</span>
-        <span className="text-white font-semibold">Restaurant</span>
-      </div>
-
-      <div className="px-4 py-12 space-y-8 max-w-6xl mx-auto">
-        {franchises.map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="bg-[#0F172A] border border-yellow-600 text-gray-200 rounded-2xl shadow-lg hover:shadow-yellow-500/20 hover:border-yellow-400 transition-all p-6 md:p-8"
+    <div className="bg-white text-gray-900 min-h-screen font-sans">
+      {/* Modern Header Section */}
+      <section className="relative bg-gradient-to-br from-gray-900 via-black to-gray-800 py-20 lg:py-28">
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
           >
-            <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-              <img
-                src={item.logo}
-                alt={item.name}
-                className="w-24 h-24 object-contain rounded-lg border border-gray-700 bg-gray-800 p-2"
-              />
+            Restaurant Franchises
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto"
+          >
+            Discover premium franchise opportunities in the food and restaurant industry
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto mt-8 rounded-full"
+          />
+        </div>
+      </section>
 
-              <div className="flex-1 space-y-3 text-sm">
-                <h2 className="text-2xl font-bold text-white">{item.name}</h2>
-                <div className="flex flex-wrap gap-2 text-xs">
-                  <span className="bg-green-700/20 text-green-400 px-3 py-1 rounded-full">
-                    {item.rating} Google Ratings
-                  </span>
-                  <span className="bg-blue-700/20 text-blue-400 px-3 py-1 rounded-full">
-                    ✅ Verified Brand
-                  </span>
+      {/* Breadcrumb */}
+      <nav className="bg-gray-50 border-b border-gray-200 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center space-x-2 text-sm text-center">
+            <Link to="/" className="text-gray-600 hover:text-gray-900 transition-colors">
+              Home
+            </Link>
+            <span className="text-gray-400">\</span>
+            <span className="text-gray-900 font-semibold">Restaurant Franchises</span>
+          </div>
+        </div>
+      </nav>
+
+      {/* Franchise Cards Section */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-8">
+            {franchises.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden"
+              >
+                <div className="p-6 md:p-8">
+                  <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+                    {/* Logo Section */}
+                    <div className="flex-shrink-0">
+                      <div className="w-20 h-20 md:w-24 md:h-24 bg-gray-50 border border-gray-200 rounded-xl p-3 flex items-center justify-center">
+                        <img
+                          src={item.logo}
+                          alt={item.name}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Content Section */}
+                    <div className="flex-1">
+                      <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+                        <div className="flex-1">
+                          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+                            {item.name}
+                          </h2>
+                          
+                          {/* Rating Badge */}
+                          <div className="flex flex-wrap gap-2 mb-4">
+                            <span className="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm font-medium border border-green-200">
+                              {item.rating} Rating
+                            </span>
+                            <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium border border-blue-200">
+                              Verified Brand
+                            </span>
+                          </div>
+
+                          {/* Description */}
+                          <p className="text-gray-600 leading-relaxed mb-4">
+                            {expandedIndex === index
+                              ? item.description
+                              : `${item.description.slice(0, 120)}...`}
+                          </p>
+
+                          {/* Franchise Details Grid */}
+                          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+                            <div className="flex items-center gap-2">
+                              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                              <span className="text-sm text-gray-700">
+                                <strong>Investment:</strong> {item.investment}
+                              </span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                              <span className="text-sm text-gray-700">
+                                <strong>Space:</strong> {item.sqft || "Flexible"}
+                              </span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                              <span className="text-sm text-gray-700">
+                                <strong>Model:</strong> {item.model || "Standard"}
+                              </span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                              <span className="text-sm text-gray-700">
+                                <strong>Franchisees:</strong> {item.franchisees || "New"}
+                              </span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                              <span className="text-sm text-gray-700">
+                                <strong>Origin:</strong> {item.origin}
+                              </span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                              <span className="text-sm text-gray-700">
+                                <strong>Since:</strong> {item.year}
+                              </span>
+                            </div>
+                          </div>
+
+                          {/* Expand/Collapse Button */}
+                          {item.description.length > 120 && (
+                            <button
+                              onClick={() => toggleDescription(index)}
+                              className="text-gray-600 hover:text-gray-900 font-medium text-sm transition-colors flex items-center gap-1"
+                            >
+                              {expandedIndex === index ? (
+                                <>
+                                  <span>Show Less</span>
+                                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                                  </svg>
+                                </>
+                              ) : (
+                                <>
+                                  <span>Read More</span>
+                                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                  </svg>
+                                </>
+                              )}
+                            </button>
+                          )}
+                        </div>
+
+                        {/* Action Buttons */}
+                        <div className="flex flex-col gap-3 lg:items-end">
+                          <button
+                            onClick={() => toggleDescription(index)}
+                            className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 text-sm font-medium whitespace-nowrap"
+                          >
+                            {expandedIndex === index ? "Hide Details" : "View Details"}
+                          </button>
+                          <Link
+                            to="/contact"
+                            className="px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all duration-200 text-sm font-medium text-center whitespace-nowrap shadow-sm"
+                          >
+                            Contact Brand
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-gray-400">
-                  {expandedIndex === index
-                    ? item.description
-                    : `${item.description.slice(0, 100)}...`}
-                </p>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-2 text-gray-300 text-sm">
-                  <div>
-                    <strong>Investment:</strong> {item.investment}
-                  </div>
-                  <div>
-                    <strong>Space:</strong> {item.sqft || "N/A"}
-                  </div>
-                  <div>
-                    <strong>Model:</strong> {item.model || "N/A"}
-                  </div>
-                  <div>
-                    <strong>Franchisees:</strong> {item.franchisees || "N/A"}
-                  </div>
-                  <div>
-                    <strong>Origin:</strong> {item.origin}
-                  </div>
-                  <div>
-                    <strong>Est. Year:</strong> {item.year}
-                  </div>
-                </div>
-
-                {expandedIndex === index && (
-                  <button
-                    onClick={() => toggleDescription(index)}
-                    className="text-red-400 underline mt-4 block text-sm"
-                  >
-                    Close
-                  </button>
-                )}
-              </div>
-
-              <div className="flex flex-col items-end gap-2 mt-4 md:mt-0">
-                <button
-                  onClick={() => toggleDescription(index)}
-                  className="text-blue-400 border border-blue-500 px-4 py-1 rounded-full hover:bg-blue-500 hover:text-white transition-all text-sm"
-                >
-                  {expandedIndex === index ? "Hide Details" : "View Details"}
-                </button>
-                <Link
-                  to="/contact"
-                  className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold text-sm px-5 py-1.5 rounded-full shadow transition-all duration-200"
-                >
-                  Contact Brand
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

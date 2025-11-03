@@ -25,7 +25,9 @@ const Enquiry = () => {
 *Investment Range:* ${formData.investment}%0A
 *Query:* ${formData.query || "N/A"}`;
 
-    const whatsappURL = `https://wa.me/919035219637?text=${encodeURIComponent(message)}`;
+    const whatsappURL = `https://wa.me/919035219637?text=${encodeURIComponent(
+      message
+    )}`;
     window.open(whatsappURL, "_blank");
   };
 
@@ -35,16 +37,15 @@ const Enquiry = () => {
         <h2 className="text-4xl font-bold text-center mb-12">Enquire Now</h2>
         <div className="h-1 w-24 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 rounded-full mx-auto mb-10" />
         <div className="grid md:grid-cols-2 gap-10 items-start">
-
           {/* Contact + Map */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
             <p className="mb-2">
-              Door No:84, Industrial Layout, 5TH Block, 3RD Cross, Near Jyothi Nivas College,
-              Koramangala, Bengaluru, Karnataka 560095
+              Startup Park, Sidharata Colony, Santhosapuram, Koramangala 2nd
+              Block, Koramangala, Bengaluru, Karnataka 560068
             </p>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.118313820758!2d77.61178277508864!3d12.934451387383963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1467d376b9d3%3A0x30c240d84dcb76fc!2sJyoti%20Nivas%20College%20Autonomous!5e0!3m2!1sen!2sin!4v1719724986017!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.7832!2d77.6246!3d12.9356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae150058b75f01%3A0xd3b7950ec31e6322!2sStartup%20park!5e0!3m2!1sen!2sin!4v1719724986017!5m2!1sen!2sin"
               width="100%"
               height="300"
               style={{ border: 0 }}
@@ -52,12 +53,14 @@ const Enquiry = () => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="rounded-lg shadow"
-              title="Koramangala Location"
+              title="Startup Park, Koramangala Location"
             ></iframe>
           </div>
-
           {/* Form Section */}
-          <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-8 space-y-4">
+          <form
+            onSubmit={handleSubmit}
+            className="bg-white rounded-lg shadow-lg p-8 space-y-4"
+          >
             <input
               type="text"
               name="name"
@@ -65,7 +68,7 @@ const Enquiry = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full border rounded px-4 py-3"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
             <input
               type="email"
@@ -74,7 +77,7 @@ const Enquiry = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full border rounded px-4 py-3"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
             <input
               type="tel"
@@ -83,14 +86,14 @@ const Enquiry = () => {
               value={formData.mobile}
               onChange={handleChange}
               required
-              className="w-full border rounded px-4 py-3"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
             <select
               name="state"
               value={formData.state}
               onChange={handleChange}
               required
-              className="w-full border rounded px-4 py-3"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="">Select State</option>
               <option value="Karnataka">Karnataka</option>
@@ -104,7 +107,7 @@ const Enquiry = () => {
               value={formData.investment}
               onChange={handleChange}
               required
-              className="w-full border rounded px-4 py-3"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="">Select Investment Range</option>
               <option value="Below ₹5 Lakhs">Below ₹5 Lakhs</option>
@@ -118,12 +121,12 @@ const Enquiry = () => {
               placeholder="Query (Optional)"
               value={formData.query}
               onChange={handleChange}
-              className="w-full border rounded px-4 py-3"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               rows="3"
             ></textarea>
             <button
               type="submit"
-              className="w-full bg-[#0F172A] hover:bg-[#1E293B] text-white font-semibold py-3 rounded"
+              className="w-full bg-[#0F172A] hover:bg-[#1E293B] text-white font-semibold py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
               Book Your Slot!
             </button>
