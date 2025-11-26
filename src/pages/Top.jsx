@@ -26,7 +26,7 @@ const franchises = [
   },
   {
     id: 3,
-    name: "Kovai Rawuther Biriyani",
+    name: "Dindigul AR Biriyani",
     description: "Leading restaurant franchises with proven business models",
     image: franchise5,
     route: "/restaurant"
